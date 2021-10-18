@@ -46,6 +46,12 @@ nav{
   display: flex;
   align-items: center;
   padding: 0 16px;
+  position: fixed;
+}
+
+.active{
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 nav *{
@@ -55,6 +61,7 @@ nav *{
 nav .navLogo{
   font-size: 32px;
   font-family: var(--headingFont);
+  font-weight: normal;
 }
 
 nav .filler{
@@ -72,7 +79,7 @@ h1, h2, h3, h4{
 }
 
 .container{
-  padding-top: 16px;
+  padding-top: 80px;
   width: 1200px;
   margin: auto;
 }
