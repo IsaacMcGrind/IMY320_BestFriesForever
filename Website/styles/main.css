@@ -36,7 +36,7 @@ a{
 }
 
 a:hover{
-  color: var(--almostBlack);
+  color: #80deea;
 }
 
 nav{
@@ -52,6 +52,7 @@ nav{
 .active{
   text-decoration: underline;
   font-weight: bold;
+  color: #4bacb8;
 }
 
 nav *{
@@ -203,4 +204,15 @@ transform: translateX(-50%);
     </body>
   </html>
 
+}
+
+.filmAnimationStill, .webappstill, .contactUsStill, .gameStill, .logoStill
+{
+    position:absolute;
+    background-color: white;
+}
+
+.filmAnimationStill:hover, .webappstill:hover, .contactUsStill:hover, .gameStill:hover, .logoStill:hover
+{
+    opacity: 0;
 }
