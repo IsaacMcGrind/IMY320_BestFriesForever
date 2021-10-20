@@ -157,6 +157,24 @@ h1, h2, h3, h4{
   }
 }
 
+@keyframes rotate3 {
+  0%{
+    transform: rotate(2deg) scaleX(-1);
+  }
+  25%{
+    transform: rotate(-1.2deg) scaleX(-1);
+  }
+  50%{
+    transform: rotate(1.5deg) scaleX(-1);
+  }
+  75%{
+    transform: rotate(-1.7deg) scaleX(-1);
+  }
+  100%{
+    transform: rotate(2deg) scaleX(-1);
+  }
+}
+
 .imageWithSubtext img{
   width: 200px;
   margin-bottom: 16px;
@@ -170,26 +188,20 @@ h1, h2, h3, h4{
   animation: rotate 2.5s ease-in-out infinite;
 }
 .main5>*:nth-child(2) img{
-  animation: hover 3s ease-in-out .05s infinite;
   animation: rotate2 5.1s ease-in-out infinite reverse;
 }
 .main5>*:nth-child(3) img{
-  animation: hover 3.1s ease-in-out .15s infinite;
-  animation: rotate2 5.05s ease-in-out infinite;
+  animation: rotate3 5.05s ease-in-out infinite;
 }
 .main5>*:nth-child(4) img{
-  animation: hover 3.25s ease-in-out .1s infinite;
   animation: rotate 2.7s ease-in-out infinite reverse;
 }
 .main5>*:nth-child(5) img{
-  animation: hover 3.15s ease-in-out .2s infinite;
   animation: rotate 2.6s ease-in-out infinite;
 }
 
 .imageWithSubtext.mainImage img{
   width: 320px;
-  -webkit-transform: scaleX(-1) !important;
-  transform: scaleX(-1) !important;
 }
 
 .imageWithSubtext.mainImage p{
