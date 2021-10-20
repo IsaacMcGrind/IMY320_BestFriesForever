@@ -41,14 +41,14 @@
       <h1 class="" style="margin-top: 96px; font-size:56px">Cat's pajamas</h1>
       <p class="mt-2">A content creation company</p>
       <div class="main5 mt-5">
-        <a href="#showreels">
+        <a href="javascript:changeURL('Film')">
           <p class="blockText">Film/animation</p>
           <div class="imageWithSubtext">
             <img src="images/film.png" alt="Film/animation" class="filmAnimationStill">
             <img src="images/filmAnimtaed.jpg">
           </div>
         </a>
-        <a href="">
+        <a href="javascript:changeURL('WebApp')">
           <p class="blockText">Web/app dev</p>
           <div class="imageWithSubtext">
             <img src="images/web.jpg" alt="Web/app dev" class="webappstill">
@@ -62,14 +62,14 @@
             <img src="images/contactUsAnimated.jpg">
           </div>
         </a>
-        <a href="">
+        <a href="javascript:changeURL('GameDev')">
           <p>Game dev</p>
           <div class="imageWithSubtext">
             <img src="images/game.jpg" alt="Game dev" class="gameStill">
             <img src="images/gameAnimated.jpg">
           </div>
         </a>
-        <a href="">
+        <a href="javascript:changeURL('Logos')">
           <p>Logos and branding</p>
           <div class="imageWithSubtext">
             <img src="images/logoDesign.png" alt="Logos and branding" class="logoStill">
@@ -94,3 +94,10 @@
     </div>
   </body>
 </html>
+
+<script>
+  function changeURL(section)
+  {
+    window.location.href = "/Website/portfolio.html?" + section;
+  }
+</script>

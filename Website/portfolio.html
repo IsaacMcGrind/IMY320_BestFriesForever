@@ -3,18 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Cat's Pajamas</title>
-    <!--BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    
     <!--MATERIAL DESIGN ICONS-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-
-
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +23,7 @@
     <!--MAIN CSS-->
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body>
+  <body onload="loadContent()">
     <nav>
       <a href="index.html" class="navLogo">Cat's Pajamas</a>
       <a href="Portfolio.html" class="active">Portfolio</a>
@@ -39,8 +35,112 @@
 
     <div class="container">
       <h1 class="">Portfolio</h1>
-      <p>This page will show all our work, along with a filter that will filter [Film/animation, Web/app dev, Game dev, Logos and branding]</p>
-      <p>The "VIEW IN PORTFOLIO" buttons on the home page should link to this page with the relevant filter applied</p>
+
+      <select class="btn-warning" onchange="filterPortfolio()" id="portfolioFilter">
+        <option value="All" id="selectAll">All</option>
+        <option value="Film/Animation" id="selectFilm">Film/Animation</option>
+        <option value="Web/App Dev" id="selectWeb">Web/App Dev</option>
+        <option value="Game Dev" id="selectGame">Game Dev</option>
+        <option value="Logos & Branding" id="selectLogo">Logos & Branding</option>
+      </select>
+
+      <div id="portfolioContent">
+      </div>
+
     </div>
   </body>
 </html>
+
+<script>
+  // This function is used to load a selection of portfolio content depeding on the URL parameter 
+  function loadContent()
+  {
+    var value = window.location.href.split("?")[1];
+    if(value == null)
+    {
+      document.getElementById("selectAll").selected = true;
+    }
+    else
+    {
+      switch (value)
+      {
+        case "All":
+          document.getElementById("selectAll").selected = true;
+        break;
+
+        case "Film":
+          document.getElementById("selectFilm").selected = true;
+        break;
+
+        case "WebApp": 
+          document.getElementById("selectWeb").selected = true;
+        break;
+
+        case "GameDev":
+          document.getElementById("selectGame").selected = true;
+        break;
+
+        case "Logos":
+          document.getElementById("selectLogo").selected = true;
+        break;
+ 
+        default:
+          document.getElementById("selectAll").selected = true;
+        
+      }
+    }
+
+    filterPortfolio();
+  }
+
+  // This function is used to filter the different sections of portfolio content
+  function filterPortfolio()
+  {
+    var value = document.getElementById("portfolioFilter").value;
+    var portfolioContent = document.getElementById("portfolioContent");
+
+    switch(value)
+    {
+      case "All":
+        var html = '<div class="card mt-3"><h5 class="card-header">Film/Animation</h5><div class="card-body">';
+        html += '<p class="card-text">This is a paragraph showing all of our Film/Animation Context.</p></div></div>';
+
+        html += '<div class="card mt-3"><h5 class="card-header">Web/App Dev</h5><div class="card-body">';
+        html += '<p class="card-text">This is a paragraph showing all of our Web/App Dev Context.</p></div></div>';
+
+        html += '<div class="card mt-3"><h5 class="card-header">Game Dev</h5><div class="card-body">';
+        html += '<p class="card-text">This is a paragraph showing all of our Game Dev Context.</p></div></div>';
+
+        html += '<div class="card mt-3"><h5 class="card-header">Logos & Branding</h5>';
+        html += '<div class="card-body"><p class="card-text">This is a paragraph showing all of our Logos & Branding Context.</p></div></div>';
+
+        portfolioContent.innerHTML = html;
+      break;
+
+      case "Film/Animation":
+        var html = '<div class="card mt-3"><h5 class="card-header">Film/Animation</h5><div class="card-body">';
+        html += '<p class="card-text">This is a paragraph showing all of our Film/Animation Context.</p></div></div>';
+        portfolioContent.innerHTML = html;
+      break;
+
+      case "Web/App Dev":
+        var html = '<div class="card mt-3"><h5 class="card-header">Web/App Dev</h5><div class="card-body">';
+        html += '<p class="card-text">This is a paragraph showing all of our Web/App Dev Context.</p></div></div>';
+        portfolioContent.innerHTML = html;
+      break;
+
+      case "Game Dev":
+        var html = '<div class="card mt-3"><h5 class="card-header">Game Dev</h5><div class="card-body">';
+        html += '<p class="card-text">This is a paragraph showing all of our Game Dev Context.</p></div></div>';
+        portfolioContent.innerHTML = html;
+      break;
+
+      case "Logos & Branding":
+        var html = '<div class="card mt-3"><h5 class="card-header">Logos & Branding</h5>';
+        html += '<div class="card-body"><p class="card-text">This is a paragraph showing all of our Logos & Branding Context.</p></div></div>';
+
+        portfolioContent.innerHTML = html;
+      break;
+    }
+  }
+</script>
