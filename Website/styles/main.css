@@ -287,7 +287,12 @@ video {
 
 #row1 div {
     display: inline-block;
-    width: fit-content;
+    width: 30%;
+}
+
+#row1 div img,
+video {
+    width: 100%;
 }
 
 
@@ -297,4 +302,8 @@ video {
 
 .item {
     width: 50%;
+}
+
+.price {
+    font-weight: bold;
 }
