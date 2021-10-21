@@ -310,6 +310,7 @@ video {
 } */
 
 .item {
+    cursor: pointer;
     width: 50%;
     height: 100%;
     border-radius: 5px;
@@ -323,10 +324,12 @@ video {
 }
 
 .item div {
-    cursor: pointer;
     width: 100%;
     margin-bottom: 5px;
 }
+
+
+/* for the item pages */
 
 #info {
     display: inline-block;
