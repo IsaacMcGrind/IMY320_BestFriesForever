@@ -108,11 +108,11 @@ h4 {
     flex-direction: column;
     align-items: center;
     /*background-color: blue;*/
-    transition: all .2s;
+    transition: scale .2s;
 }
 
 .imageWithSubtext:hover {
-    transform: scale(1.14);
+    scale: 1.14;
 }
 
 @keyframes hover {
@@ -129,53 +129,53 @@ h4 {
 
 @keyframes rotate {
     0% {
-        transform: rotate(-3deg);
+        rotate: -3deg;
     }
     60% {
-        transform: rotate(3deg);
+        rotate: 3deg;
     }
     100% {
-        transform: rotate(-3deg);
+        rotate: -3deg;
     }
 }
 
 @keyframes rotate2 {
     0% {
-        transform: rotate(3.2deg);
+        rotate: 3.2deg;
     }
     25% {
-        transform: rotate(-1.6deg);
+        rotate: -1.6deg;
     }
     50% {
-        transform: rotate(2.9deg);
+        rotate: 2.9deg;
     }
     75% {
-        transform: rotate(-2.2deg);
+        rotate: -2.2deg;
     }
     100% {
-        transform: rotate(3.2deg);
+        rotate: 3.2deg;
     }
 }
 
 @keyframes rotate3 {
     0% {
-        transform: rotate(3deg);
+        rotate: 3deg;
         scale: -1 1;
     }
     25% {
-        transform: rotate(-3deg);
+        rotate: -3deg;
         scale: -1 1;
     }
     50% {
-        transform: rotate(2.9deg);
+        rotate: 2.9deg;
         scale: -1 1;
     }
     75% {
-        transform: rotate(-3.1deg);
+        rotate: -3.1deg;
         scale: -1 1;
     }
     100% {
-        transform: rotate(3deg);
+        rotate: 3deg;
         scale: -1 1;
     }
 }
@@ -271,7 +271,7 @@ h4 {
 
 ul.ulfilter {
     list-style-type: none;
-    color: var(--primary);
+    color: var(--primaryDark);
     font-weight: bold;
 }
 
@@ -365,8 +365,11 @@ video {
     background-color: var(--secondary);
 }
 
-#showreels {
-    padding-top: 24px;
+.act {
+    width: 50%;
+    border: 1px solid var(--primaryDark);
+    border-radius: 5px;
+    padding-left: 10%;
 }
 
 #showreels {
