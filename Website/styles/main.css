@@ -365,6 +365,9 @@ video {
     background-color: var(--secondary);
 }
 
+
+/* active filter tab */
+
 .act {
     width: 50%;
     border: 1px solid var(--primaryDark);
