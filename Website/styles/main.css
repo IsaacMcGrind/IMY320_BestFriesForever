@@ -108,71 +108,76 @@ h4 {
     flex-direction: column;
     align-items: center;
     /*background-color: blue;*/
-    transition: transform .2s;
+    transition: scale .2s;
 }
 
 .imageWithSubtext:hover {
-    transform: scale(1.14);
+    scale: 1.14;
 }
 
 @keyframes hover {
     0% {
-        transform: translateY(8px);
+        translate: 0 12px;
     }
     50% {
-        transform: translateY(-8px);
+        translate: 0 -12px;
     }
     100% {
-        transform: translateY(8px);
+        translate: 0 12px;
     }
 }
 
 @keyframes rotate {
     0% {
-        transform: rotate(-1.5deg);
+        rotate: -2.7deg;
     }
     60% {
-        transform: rotate(1.5deg);
+        rotate: 2.7deg;
     }
     100% {
-        transform: rotate(-1.5deg);
+        rotate: -2.7deg;
     }
 }
 
 @keyframes rotate2 {
     0% {
-        transform: rotate(2deg);
+        rotate: 3deg;
     }
     25% {
-        transform: rotate(-1.2deg);
+        rotate: -1.4deg;
     }
     50% {
-        transform: rotate(1.5deg);
+        rotate: 2.7deg;
     }
     75% {
-        transform: rotate(-1.7deg);
+        rotate: -2deg;
     }
     100% {
-        transform: rotate(2deg);
+        rotate: 3deg;
     }
 }
 
 @keyframes rotate3 {
-    0% {
-        transform: rotate(2deg) scaleX(-1);
-    }
-    25% {
-        transform: rotate(-1.2deg) scaleX(-1);
-    }
-    50% {
-        transform: rotate(1.5deg) scaleX(-1);
-    }
-    75% {
-        transform: rotate(-1.7deg) scaleX(-1);
-    }
-    100% {
-        transform: rotate(2deg) scaleX(-1);
-    }
+  0% {
+      rotate: 2.8deg;
+      scale: -1 1;
+  }
+  25% {
+      rotate: -2.8deg;
+      scale: -1 1;
+  }
+  50% {
+      rotate: 2.7deg;
+      scale: -1 1;
+  }
+  75% {
+      rotate: -2.9deg;
+      scale: -1 1;
+  }
+  100% {
+      rotate: 2.8deg;
+      scale: -1 1;
+  }
 }
 
 .imageWithSubtext img {
@@ -180,28 +185,27 @@ h4 {
     margin-bottom: 16px;
     border-radius: 8px;
     box-shadow: var(--shadow2);
-    transform: translateY(8px);
+    translate: 0 12px;
 }
 
 .main5>*:nth-child(1) img {
-    animation: hover 3.2s ease-in-out infinite;
-    animation: rotate 2.5s ease-in-out infinite;
+    animation: hover 3.2s ease-in-out infinite, rotate 2.5s ease-in-out infinite;
 }
 
 .main5>*:nth-child(2) img {
-    animation: rotate2 5.1s ease-in-out infinite reverse;
+    animation: hover 3.2s ease-in-out infinite, rotate2 5.1s ease-in-out infinite reverse;
 }
 
 .main5>*:nth-child(3) img {
-    animation: rotate3 5.05s ease-in-out infinite;
+    animation: hover 3.2s ease-in-out infinite, rotate3 5.05s ease-in-out infinite;
 }
 
 .main5>*:nth-child(4) img {
-    animation: rotate 2.7s ease-in-out infinite reverse;
+    animation: hover 3.2s ease-in-out infinite, rotate 2.7s ease-in-out infinite reverse;
 }
 
 .main5>*:nth-child(5) img {
-    animation: rotate 2.6s ease-in-out infinite;
+    animation: hover 3.2s ease-in-out infinite, rotate 2.6s ease-in-out infinite;
 }
 
 .imageWithSubtext.mainImage img {
@@ -358,4 +362,8 @@ video {
 #addTo {
     border-radius: 8px;
     background-color: var(--secondary);
+}
+
+#showreels{
+  padding-top: 24px;
 }
