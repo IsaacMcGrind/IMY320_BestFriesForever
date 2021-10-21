@@ -280,3 +280,21 @@ li {
 #filter {
     display: inline-block;
 }
+
+video {
+    size: inherit;
+}
+
+#row1 div {
+    display: inline-block;
+    width: fit-content;
+}
+
+
+/* video {
+    width: 10%;
+} */
+
+.item {
+    width: 50%;
+}
