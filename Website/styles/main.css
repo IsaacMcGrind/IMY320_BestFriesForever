@@ -327,3 +327,32 @@ video {
     width: 100%;
     margin-bottom: 5px;
 }
+
+#info {
+    display: inline-block;
+    right: 0%;
+    height: auto;
+    width: 60%;
+    flex: 1;
+}
+
+#info p {
+    display: inherit;
+}
+
+#infoimg {
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    flex: 1;
+    padding-right: 10px;
+}
+
+#infoimg img {
+    width: 100%;
+}
+
+#addTo {
+    border-radius: 8px;
+    background-color: var(--secondary);
+}
