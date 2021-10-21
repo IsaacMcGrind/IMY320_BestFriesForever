@@ -97,6 +97,14 @@
                 </div>
 
             </div>
+            <script>
+                $("#film").click(function() {
+                    if ($("#film").attr("poster") == "")
+                        $("#film").attr("poster", "media/Doctor_SparkVideo.gif");
+                    else
+                        $("#film").attr("poster", "");
+                })
+            </script>
 </body>
 
 </html>
