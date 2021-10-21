@@ -25,17 +25,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 
     <!--MAIN CSS-->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 
 <body>
     <nav>
-        <a href="index.html" class="navLogo">Cat's Pajamas</a>
-        <a href="Portfolio.html">Portfolio</a>
-        <a href="store.html" class="active">Store</a>
+        <a href="../index.html" class="navLogo">Cat's Pajamas</a>
+        <a href="../Portfolio.html">Portfolio</a>
+        <a href="../store.html" class="active">Store</a>
         <div class="filler"></div>
-        <a href="contactUs.html" class="circleBorder">Contact us</a>
-        <a href="cart.html"><span class="material-icons pointer">shopping_cart</span></a>
+        <a href="../contactUs.html" class="circleBorder">Contact us</a>
+        <a href="../cart.html"><span class="material-icons pointer">shopping_cart</span></a>
     </nav>
 
     <div class="container">
@@ -50,18 +50,60 @@
                 </ul>
             </div>
             <div class="col-xl-8">
+                <div id="info">
+                    <video controls id="film">
+                        <source src="../media/Doctor.mp4">
+                    </video>
+                    <div id="details">
+                        <p>Here we have a D&D anroid app design that helps the user with character creation, management and usesage</p>
+                    </div>
+                </div>
 
             </div>
 
         </div>
         <script>
-            $("#film").click(function() {
-                if ($("#film").attr("poster") == "")
-                    $("#film").attr("poster", "media/Doctor_SparkVideo.gif");
-                else
-                    $("#film").attr("poster", "");
-            })
+            $("#info").hover(function() {
+                    $("#details").css('display', 'flex');
+                    $("#film").animate({
+                        opacity: '0.5'
+                    });
+                },
+                function() {
+                    $("#details").css('display', 'none');
+                    $("#film").animate({
+                        opacity: '1'
+                    });
+                });
         </script>
+
+        <style>
+            #info {
+                border-radius: 5px;
+                width: 100%;
+                position: relative;
+                height: 100%;
+            }
+            
+            #info video {
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+            }
+            
+            #details {
+                width: 100%;
+                /* display: flex; */
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                background-color: rgba(0, 0, 0, 0.205);
+                /* background-blend-mode: overlay; */
+                height: 100%;
+                z-index: 2;
+                border-radius: 5px;
+            }
+        </style>
 </body>
 
 </html>
