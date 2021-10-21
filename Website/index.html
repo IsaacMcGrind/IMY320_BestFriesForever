@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="toptop">
   <head>
     <meta charset="utf-8">
     <title>Cat's Pajamas</title>
@@ -26,6 +26,9 @@
 
     <!--MAIN CSS-->
     <link rel="stylesheet" href="styles/main.css">
+
+    <!--SCRIPTS-->
+    <script src="scripts/splash.js" charset="utf-8"></script>
   </head>
   <body>
     <nav>
@@ -74,12 +77,12 @@
       </div>
     </div>
 
-    <a href="#showreels">
-      <div class="readMore pointer">
+    <a href="#showreels" id="scrollButtonLink">
+      <div id="scrollButtonContainer" class="readMore pointer">
         <div class="circle">
-          <span class="material-icons">expand_more</span>
+          <span class="material-icons" id="scrollButtonImage">expand_more</span>
         </div>
-        <p>Read More</p>
+        <p id="scrollButtonText">Read More</p>
       </div>
     </a>
 
