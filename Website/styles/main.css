@@ -302,6 +302,8 @@ video {
 
 .item {
     width: 50%;
+    border-radius: 5px;
+    border: 1px solid var(--primary);
 }
 
 .price {
