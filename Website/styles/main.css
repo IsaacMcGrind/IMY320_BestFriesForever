@@ -267,7 +267,7 @@ h4 {
 
 ul {
     list-style-type: none;
-    color: var(--primary);
+    color: var(--primaryDark);
     font-weight: bold;
 }
 
@@ -316,6 +316,7 @@ video {
     border-radius: 5px;
     border: 1px solid var(--primary);
     margin: 2px;
+    padding: 8px;
     flex: 1;
 }
 
@@ -358,4 +359,11 @@ video {
 #addTo {
     border-radius: 8px;
     background-color: var(--secondary);
+}
+
+.act {
+    width: 50%;
+    border: 1px solid var(--primaryDark);
+    border-radius: 5px;
+    padding-left: 10%;
 }

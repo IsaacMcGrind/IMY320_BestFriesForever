@@ -44,14 +44,14 @@
             <div id="filter" class="col-xl-4">
                 <p>filter by:</p>
                 <ul>
-                    <li>All products</li>
-                    <li>Entertainment</li>
-                    <li>Web apps</li>
+                    <li class="act" id="all">All products</li>
+                    <li id="clothes">Clothing</li>
+                    <li id="gear">Gear</li>
                 </ul>
             </div>
             <div class="col-xl-8">
                 <div id="row1">
-                    <div class="item" onclick="window.location='storeitems/shirt.html'">
+                    <div class="item clothing" onclick="window.location='storeitems/shirt.html'">
                         <img src="storeMedia/shirt.jpg" alt="plain shirt">
                         <div>
                             <h6>Cat's Pajamas shirt</h6>
@@ -59,7 +59,7 @@
                         </div>
 
                     </div>
-                    <div class="item" onclick="window.location='storeitems/dnd.html'">
+                    <div class="item clothing" onclick="window.location='storeitems/dnd.html'">
                         <img src="storeMedia/beanie.jpg" alt="">
                         <div>
                             <h6>Cat's Pajamas beanie</h6>
@@ -68,7 +68,7 @@
 
 
                     </div>
-                    <div class="item">
+                    <div class="item clothing">
                         <img src="storeMedia/cap.jpg" alt="">
                         <div>
                             <h6>Cat's Pajamas cap</h6>
@@ -79,7 +79,7 @@
                 </div>
 
                 <div id="row2">
-                    <div class="item">
+                    <div class="item gear">
                         <img src="storeMedia/bottle.jpg" alt="">
                         <div>
                             <h6>Cat's Pajamas bottle</h6>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="item">
+                    <div class="item gear">
                         <img src="storeMedia/mousepad.jpg" alt="">
                         <div>
                             <h6>Cat's Pajamas mousepad</h6>
@@ -96,7 +96,7 @@
 
                     </div>
 
-                    <div class="item">
+                    <div class="item gear">
                         <img src="storeMedia/keychain.jpg" alt="">
                         <div>
                             <h6>Cat's Pajamas lanyard</h6>
@@ -106,6 +106,28 @@
                 </div>
 
             </div>
+
+            <script>
+                $("#clothes").click(function() {
+                    $(".item").filter(".clothing").css("display", "initial");
+                    $(".item").not(".clothing").css("display", "none");
+                    $(".act").removeClass("act");
+                    $("#clothes").addClass("act");
+                });
+
+                $("#all").click(function() {
+                    $(".item").css("display", "initial");
+                    $(".act").removeClass("act");
+                    $("#all").addClass("act");
+                });
+
+                $("#gear").click(function() {
+                    $(".item").filter(".gear").css("display", "initial");
+                    $(".item").not(".gear").css("display", "none");
+                    $(".act").removeClass("act");
+                    $("#gear").addClass("act");
+                })
+            </script>
 </body>
 
 </html>
