@@ -57,6 +57,7 @@
                     <div id="details">
                         <p>Here we have a D&D anroid app design that helps the user with character creation, management and usesage</p>
                     </div>
+                    <button>&lt</button>
                 </div>
 
             </div>
@@ -66,20 +67,23 @@
             $("#info").hover(function() {
                     $("#details").css('display', 'flex');
                     $("#film").animate({
-                        opacity: '0.5'
+                        opacity: '0',
+                        BorderRadius: '5px'
+
                     });
                 },
                 function() {
                     $("#details").css('display', 'none');
                     $("#film").animate({
-                        opacity: '1'
+                        opacity: '1',
+                        BorderRadius: '0px'
                     });
+
                 });
         </script>
 
         <style>
             #info {
-                border-radius: 5px;
                 width: 100%;
                 position: relative;
                 height: 100%;
@@ -97,7 +101,7 @@
                 position: absolute;
                 top: 0%;
                 left: 0%;
-                background-color: rgba(0, 0, 0, 0.205);
+                background-color: #eda90a77;
                 /* background-blend-mode: overlay; */
                 height: 100%;
                 z-index: 2;
