@@ -63,7 +63,27 @@
 
                     </div>
                     <div class="item">
-                        <img src="media/logo.png" alt="" id="gamingTavern" style="height: 20%; width: auto;">
+                        <img src="media/logo.png" alt="" id="gamingTavern" style="height:auto; width:65%; margin-left: 18%; margin-right: auto;">
+                        <h6>Game Library website</h6>
+                        <p class="price">R200</p>
+
+                    </div>
+                </div>
+
+                <div id="row2">
+                    <div class="item">
+                        <video id="film" src="media/Doctor.mp4" poster="media/Doctor_SparkVideo.gif"></video>
+                        <h6>Horror film</h6>
+                        <p class="price">R200</p>
+                    </div>
+                    <div class="item">
+                        <img src="media/D&D.jpg" alt="">
+                        <h6>D&D App</h6>
+                        <p class="price">R200</p>
+
+                    </div>
+                    <div class="item">
+                        <img src="media/logo.png" alt="" id="gamingTavern" style="height:auto; width:65%; margin-left: 18%; margin-right: auto;">
                         <h6>Game Library website</h6>
                         <p class="price">R200</p>
 
@@ -71,17 +91,14 @@
                 </div>
 
             </div>
-        </div>
-    </div>
-
-    <script>
-        $("#film").click(function() {
-            if ($("#film").attr("poster") == "")
-                $("#film").attr("poster", "media/Doctor_SparkVideo.gif");
-            else
-                $("#film").attr("poster", "");
-        })
-    </script>
+            <script>
+                $("#film").click(function() {
+                    if ($("#film").attr("poster") == "")
+                        $("#film").attr("poster", "media/Doctor_SparkVideo.gif");
+                    else
+                        $("#film").attr("poster", "");
+                })
+            </script>
 </body>
 
 </html>

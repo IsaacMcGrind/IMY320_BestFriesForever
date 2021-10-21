@@ -282,17 +282,26 @@ li {
 }
 
 video {
-    size: inherit;
+    width: 100%;
 }
 
-#row1 div {
+#row1,
+#row2 {
+    display: block;
+}
+
+#row1 div,
+#row2 div {
     display: inline-block;
     width: 30%;
+    height: 100%;
+    align-content: center;
 }
 
 #row1 div img,
-video {
+#row2 div img {
     width: 100%;
+    height: auto;
 }
 
 
