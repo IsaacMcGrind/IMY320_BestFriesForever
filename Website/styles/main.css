@@ -108,11 +108,11 @@ h4 {
     flex-direction: column;
     align-items: center;
     /*background-color: blue;*/
-    transition: scale .2s;
+    transition: all .2s;
 }
 
 .imageWithSubtext:hover {
-    scale: 1.14;
+    transform: scale(1.14);
 }
 
 @keyframes hover {
@@ -129,55 +129,55 @@ h4 {
 
 @keyframes rotate {
     0% {
-        rotate: -3deg;
+        transform: rotate(-3deg);
     }
     60% {
-        rotate: 3deg;
+        transform: rotate(3deg);
     }
     100% {
-        rotate: -3deg;
+        transform: rotate(-3deg);
     }
 }
 
 @keyframes rotate2 {
     0% {
-        rotate: 3.2deg;
+        transform: rotate(3.2deg);
     }
     25% {
-        rotate: -1.6deg;
+        transform: rotate(-1.6deg);
     }
     50% {
-        rotate: 2.9deg;
+        transform: rotate(2.9deg);
     }
     75% {
-        rotate: -2.2deg;
+        transform: rotate(-2.2deg);
     }
     100% {
-        rotate: 3.2deg;
+        transform: rotate(3.2deg);
     }
 }
 
 @keyframes rotate3 {
-    0% {
-        rotate: 3deg;
-        scale: -1 1;
-    }
-    25% {
-        rotate: -3deg;
-        scale: -1 1;
-    }
-    50% {
-        rotate: 2.9deg;
-        scale: -1 1;
-    }
-    75% {
-        rotate: -3.1deg;
-        scale: -1 1;
-    }
-    100% {
-        rotate: 3deg;
-        scale: -1 1;
-    }
+  0% {
+      transform: rotate(3deg);
+      scale: -1 1;
+  }
+  25% {
+      transform: rotate(-3deg);
+      scale: -1 1;
+  }
+  50% {
+      transform: rotate(2.9deg);
+      scale: -1 1;
+  }
+  75% {
+      transform: rotate(-3.1deg);
+      scale: -1 1;
+  }
+  100% {
+      transform: rotate(3deg);
+      scale: -1 1;
+  }
 }
 
 .imageWithSubtext img {
@@ -271,7 +271,7 @@ h4 {
 
 ul {
     list-style-type: none;
-    color: var(--primaryDark);
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -320,7 +320,6 @@ video {
     border-radius: 5px;
     border: 1px solid var(--primary);
     margin: 2px;
-    padding: 8px;
     flex: 1;
 }
 
@@ -365,13 +364,6 @@ video {
     background-color: var(--secondary);
 }
 
-.act {
-    width: 50%;
-    border: 1px solid var(--primaryDark);
-    border-radius: 5px;
-    padding-left: 10%;
-}
-
-#showreels {
-    padding-top: 24px;
+#showreels{
+  padding-top: 24px;
 }
