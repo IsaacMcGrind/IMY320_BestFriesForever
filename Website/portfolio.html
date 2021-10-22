@@ -105,8 +105,21 @@
     switch(value)
     {
       case "All":
-        fetch('Portfolio%20Files/portfolioContent.html').then(response => response.text()).then((data)=> {
-            portfolioContent.innerHTML = data;
+        portfolioContent.innerHTML = "";
+        fetch('Portfolio%20Files/FilmAnimation.html').then(response => response.text()).then((data)=> {
+            portfolioContent.innerHTML += data;
+        });
+
+        fetch('Portfolio%20Files/WebApp.html').then(response => response.text()).then((data)=> {
+          portfolioContent.innerHTML += data;
+        });
+
+        fetch('Portfolio%20Files/GameDev.html').then(response => response.text()).then((data)=> {
+          portfolioContent.innerHTML += data;
+        });
+
+        fetch('Portfolio%20Files/LogosBranding.html').then(response => response.text()).then((data)=> {
+          portfolioContent.innerHTML += data;
         });
       break;
 
