@@ -373,7 +373,8 @@ video {
 }
 
 #showreels {
-    padding-top: 24px;
+    padding-top: 48px;
+    padding-top: -48px;
 }
 
 
