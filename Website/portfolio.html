@@ -20,6 +20,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
 
+    <!--Font awesome icons-->
+    <script src="https://kit.fontawesome.com/2dec9e9dd2.js" crossorigin="anonymous"></script>
+
     <!--MAIN CSS-->
     <link rel="stylesheet" href="styles/main.css">
   </head>
@@ -102,44 +105,33 @@
     switch(value)
     {
       case "All":
-        var html = '<div class="card mt-3"><h5 class="card-header">Film/Animation</h5><div class="card-body">';
-        html += '<p class="card-text">This is a paragraph showing all of our Film/Animation Context.</p></div></div>';
-
-        html += '<div class="card mt-3"><h5 class="card-header">Web/App Dev</h5><div class="card-body">';
-        html += '<p class="card-text">This is a paragraph showing all of our Web/App Dev Context.</p></div></div>';
-
-        html += '<div class="card mt-3"><h5 class="card-header">Game Dev</h5><div class="card-body">';
-        html += '<p class="card-text">This is a paragraph showing all of our Game Dev Context.</p></div></div>';
-
-        html += '<div class="card mt-3"><h5 class="card-header">Logos & Branding</h5>';
-        html += '<div class="card-body"><p class="card-text">This is a paragraph showing all of our Logos & Branding Context.</p></div></div>';
-
-        portfolioContent.innerHTML = html;
+        fetch('Portfolio%20Files/portfolioContent.html').then(response => response.text()).then((data)=> {
+            portfolioContent.innerHTML = data;
+        });
       break;
 
       case "Film/Animation":
-        var html = '<div class="card mt-3"><h5 class="card-header">Film/Animation</h5><div class="card-body">';
-        html += '<p class="card-text">This is a paragraph showing all of our Film/Animation Context.</p></div></div>';
-        portfolioContent.innerHTML = html;
+        fetch('Portfolio%20Files/FilmAnimation.html').then(response => response.text()).then((data)=> {
+            portfolioContent.innerHTML = data;
+        });
       break;
 
       case "Web/App Dev":
-        var html = '<div class="card mt-3"><h5 class="card-header">Web/App Dev</h5><div class="card-body">';
-        html += '<p class="card-text">This is a paragraph showing all of our Web/App Dev Context.</p></div></div>';
-        portfolioContent.innerHTML = html;
+        fetch('Portfolio%20Files/WebApp.html').then(response => response.text()).then((data)=> {
+          portfolioContent.innerHTML = data;
+        });
       break;
 
       case "Game Dev":
-        var html = '<div class="card mt-3"><h5 class="card-header">Game Dev</h5><div class="card-body">';
-        html += '<p class="card-text">This is a paragraph showing all of our Game Dev Context.</p></div></div>';
-        portfolioContent.innerHTML = html;
+      fetch('Portfolio%20Files/GameDev.html').then(response => response.text()).then((data)=> {
+          portfolioContent.innerHTML = data;
+        });
       break;
 
       case "Logos & Branding":
-        var html = '<div class="card mt-3"><h5 class="card-header">Logos & Branding</h5>';
-        html += '<div class="card-body"><p class="card-text">This is a paragraph showing all of our Logos & Branding Context.</p></div></div>';
-
-        portfolioContent.innerHTML = html;
+        fetch('Portfolio%20Files/LogosBranding.html').then(response => response.text()).then((data)=> {
+          portfolioContent.innerHTML = data;
+        });
       break;
     }
   }
