@@ -108,11 +108,11 @@ h4 {
     flex-direction: column;
     align-items: center;
     /*background-color: blue;*/
-    transition: scale .2s;
+    transition: transform .2s;
 }
 
 .imageWithSubtext:hover {
-    scale: 1.14;
+    transform: scale(1.14);
 }
 
 @keyframes hover {
@@ -129,54 +129,49 @@ h4 {
 
 @keyframes rotate {
     0% {
-        rotate: -3deg;
+        transform: rotate(-3.4deg);
     }
     60% {
-        rotate: 3deg;
+        transform: rotate(3.4deg);
     }
     100% {
-        rotate: -3deg;
+        transform: rotate(-3.4deg);
     }
 }
 
 @keyframes rotate2 {
     0% {
-        rotate: 3.2deg;
+        transform: rotate(3.5deg);
     }
     25% {
-        rotate: -1.6deg;
+        transform: rotate(-1.9deg);
     }
     50% {
-        rotate: 2.9deg;
+        transform: rotate(3.2deg);
     }
     75% {
-        rotate: -2.2deg;
+        transform: rotate(-2.5deg);
     }
     100% {
-        rotate: 3.2deg;
+        transform: rotate(3.5deg);
     }
 }
 
 @keyframes rotate3 {
     0% {
-        rotate: 3deg;
-        scale: -1 1;
+        transform: rotate(3.3deg) scaleX(-1);
     }
     25% {
-        rotate: -3deg;
-        scale: -1 1;
+        transform: rotate(-3.3deg) scaleX(-1);
     }
     50% {
-        rotate: 2.9deg;
-        scale: -1 1;
+        transform: rotate(3.2deg) scaleX(-1);
     }
     75% {
-        rotate: -3.1deg;
-        scale: -1 1;
+        transform: rotate(-3.4deg) scaleX(-1);
     }
     100% {
-        rotate: 3deg;
-        scale: -1 1;
+        transform: rotate(3.3deg) scaleX(-1);
     }
 }
 
