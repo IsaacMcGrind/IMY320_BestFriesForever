@@ -24,6 +24,7 @@
 
 html,
 body {
+    background-image: url('media/back.gif');
     height: 100%;
 }
 
@@ -73,6 +74,14 @@ h3,
 h4 {
     font-family: var(--headingFont);
 }
+
+.backCover {
+    background-image: url('media/back.gif');
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+
+
 .imgSize {
     height: 280px;
 }
