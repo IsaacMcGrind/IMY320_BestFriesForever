@@ -73,7 +73,18 @@ h3,
 h4 {
     font-family: var(--headingFont);
 }
+.imgSize {
+    height: 280px;
+}
 
+.cardHover{
+    padding: 10px;
+    height: 500px;
+}
+
+.cardHover:hover {
+    border-color: #eda80a;
+}
 .circleBorder {
     border-radius: 8px;
     padding: 8px 12px;
