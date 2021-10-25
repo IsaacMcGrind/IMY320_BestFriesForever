@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-    color: #80deea;
+    color: var(--primaryLight);
 }
 
 nav {
@@ -50,7 +50,7 @@ nav {
 .active {
     text-decoration: underline;
     font-weight: bold;
-    color: #4bacb8;
+    color: var(--primaryLight);
 }
 
 nav * {
