@@ -140,7 +140,13 @@ iframe {
   top: 0;
   left: 0;
 }
-
+.boxBox {
+  border-radius: 8px;
+  box-shadow: var(--shadow2);  
+  position: relative;
+  padding: 20px;
+  margin-top: 30px;
+}
 .wrap-contact100 {
   width: 670px;
   background: #fff;
@@ -148,6 +154,7 @@ iframe {
     box-shadow: var(--shadow2);
   overflow: hidden;
   position: relative;
+  
 }
 
 /*==================================================================
