@@ -144,7 +144,8 @@ iframe {
 .wrap-contact100 {
   width: 670px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
+    box-shadow: var(--shadow2);
   overflow: hidden;
   position: relative;
 }
