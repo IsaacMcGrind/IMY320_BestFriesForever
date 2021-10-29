@@ -33,7 +33,7 @@ a {
 }
 
 a:hover {
-    color: var(--primaryLight);
+    text-decoration: none;
 }
 
 nav {
@@ -47,10 +47,14 @@ nav {
     z-index: 10;
 }
 
+nav a:hover{
+  color: var(--almostBlack);
+  text-decoration: underline;
+}
+
 .active {
     text-decoration: underline;
-    font-weight: bold;
-    color: var(--primaryLight);
+    font-weight: bold!important;
 }
 
 nav * {
