@@ -466,11 +466,12 @@ ul.breadcrumb li a:hover {
 .iconWithTextRight{
   display: flex;
   flex-direction: row;
-  margin: 8px 0;
+  margin: 8px 0 16px 0;
 }
 
 .iconWithTextRight *{
   color: #444444;
+  margin: 0;
 }
 
 .iconWithTextRight *:nth-child(1){
