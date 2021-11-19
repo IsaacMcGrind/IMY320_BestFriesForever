@@ -78,18 +78,38 @@ h4 {
     font-family: var(--headingFont);
 }
 
+.backCover{
+    background-color: var(--primary);
+    padding: 50px;
+}
 
 .imgSize {
-    height: 280px;
+    height: 250px;
+    margin-top: -50px;
+    background-color: #1f1f1f;
+    box-shadow: var(--shadow2);
+}
+
+h5{
+    margin-top: 10px !important;
+}
+
+.card {
+    box-shadow: var(--shadow2);
+}
+
+.card-text{
+    font-size: 12px;
 }
 
 .cardHover{
     padding: 10px;
-    height: 500px;
+    height: 400px;
 }
 
 .cardHover:hover {
     border-color: #eda80a;
+    cursor: pointer;
 }
 .circleBorder {
     border-radius: 8px;
